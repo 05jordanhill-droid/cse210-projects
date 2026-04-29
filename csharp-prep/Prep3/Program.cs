@@ -15,7 +15,7 @@ class Program
 
             int jah_counter = 0;
 
-            Console.WriteLine(jah_number);
+            // Console.WriteLine(jah_number);
 
             do
             {
@@ -25,11 +25,11 @@ class Program
                 
                 if (jah_guess > jah_number)
                 {
-                    Console.WriteLine("Too high. Guess lower.");
+                    Console.WriteLine("Lower.");
                 }
                 else if (jah_guess < jah_number)
                 {
-                    Console.WriteLine("Too low. Guess higher.");
+                    Console.WriteLine("Higher.");
                 }
 
                 jah_counter ++;
