@@ -25,8 +25,8 @@ class Program
         jahJobs._jobs.Add(jahJob1);
         jahJobs._jobs.Add(jahJob2);
         
-        Console.WriteLine(jahJob1.toString());
-        Console.WriteLine(jahJob2.toString());
-        Console.WriteLine(jahJobs.toString());
+        Console.WriteLine(jahJob1);
+        Console.WriteLine(jahJob2);
+        Console.WriteLine(jahJobs);
     }
 }

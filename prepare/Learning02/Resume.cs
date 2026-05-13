@@ -5,7 +5,7 @@ public class Resume
     public string _name;
     public List<Job> _jobs = new List<Job>();
 
-    public string toString()
+    public override string ToString()
     {
         string rvalue = "";
         rvalue += $"Name: {_name}\n";
@@ -13,7 +13,7 @@ public class Resume
 
         foreach (Job job in _jobs)
         {
-            rvalue += job.toString();
+            rvalue += job.ToString();
         }
 
         return rvalue;

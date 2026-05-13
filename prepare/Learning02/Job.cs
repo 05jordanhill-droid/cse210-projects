@@ -5,7 +5,7 @@ public class Job
     public double _startYear;
     public double _endYear;
 
-    public string toString()
+    public override string ToString()
     {
         string rvalue = $"{_jobTitle} ({_company}) {_startYear}-{_endYear}\n";
 
