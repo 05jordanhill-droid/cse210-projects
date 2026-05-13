@@ -1,17 +1,17 @@
 using System.Globalization;
 
 // Class Name	                Journal	                                Entry	                    Prompt
-// class methods	    _entriesList : list<Entry>	            _response : string	            _prompt : string
-// 		                _date : DateTime	                    _entry : string                 _promptList : list<string> 
-//                      	                                    _date : string                  _random : Random
+// class methods	    _jahEntriesList : list<Entry>	        _jahResponse : string	           _jahPrompt : string
+// 		                _jahDate : DateTime	                    _jahEntry : string                 _jahPromptList : list<string> 
+//                      	                                    _jahDate : string                  _random : Random
 //          
-// class functions	    SaveEntry(): void	                    ToString(): string	            GeneratePrompt(): string
+// class functions	    SaveEntry(): void	                    ToString(): string	               GeneratePrompt(): string
 // 	                    SaveJournal(string username): void		ToFile(): string
 // 	                    LoadJournal(string username): Entry		ToCSV(): string
 // 	                    ToString(): string	                    FromCSV(): void
 public class Prompt
 {
-    public List<string> _promptList = new List<string>()
+    public List<string> _jahPromptList = new List<string>()
     {
         "prompt 1",
         "prompt 2",
@@ -19,17 +19,17 @@ public class Prompt
         "prompt 4",
         "prompt 5",
     };
-    public string _prompt;
+    public string _jahPrompt;
     public Random _random = new Random();
 
     public Prompt()
     {
-        _prompt = GeneratePrompt();
+        _jahPrompt = GeneratePrompt();
     }
 
     public string GeneratePrompt()
     {
-        _prompt = _promptList[_random.Next(_promptList.Count)];
-        return _prompt;
+        _jahPrompt = _jahPromptList[_random.Next(_jahPromptList.Count)];
+        return _jahPrompt;
     }
 }

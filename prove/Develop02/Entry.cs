@@ -1,32 +1,32 @@
 using System.Globalization;
 
 // Class Name	                Journal	                                Entry	                    Prompt
-// class methods	    _entriesList : list<Entry>	            _response : string	            _prompt : string
-// 		                _date : DateTime	                    _entry : string                 _promptList : list<string> 
-//                      	                                    _date : string                  _random : Random
+// class methods	    _jahEntriesList : list<Entry>	        _jahResponse : string	           _jahPrompt : string
+// 		                _jahDate : DateTime	                    _jahEntry : string                 _jahPromptList : list<string> 
+//                      	                                    _jahDate : string                  _random : Random
 //          
-// class functions	    SaveEntry(): void	                    ToString(): string	            GeneratePrompt(): string
+// class functions	    SaveEntry(): void	                    ToString(): string	               GeneratePrompt(): string
 // 	                    SaveJournal(string username): void		ToFile(): string
 // 	                    LoadJournal(string username): Entry		ToCSV(): string
 // 	                    ToString(): string	                    FromCSV(): void
 public class Entry
 {
-    public string _response;
-    public Prompt _prompt = new Prompt();
-    public string _date;
+    public string _jahResponse;
+    public Prompt _jahPrompt = new Prompt();
+    public string _jahDate;
 
     public Entry()
     {
-        _prompt.GeneratePrompt();
+        _jahPrompt.GeneratePrompt();
 
         DateTime theCurrentTime = DateTime.Now;
         string dateText = theCurrentTime.ToShortDateString();
-        _date = dateText;
+        _jahDate = dateText;
     }
 
     public string ToFile()
     {
-        string rvalue = $"\"{ToCSV(_date)}\",\"{ToCSV(_prompt._prompt)}\",\"{ToCSV(_response)}\"";
+        string rvalue = $"\"{ToCSV(_jahDate)}\",\"{ToCSV(_jahPrompt._jahPrompt)}\",\"{ToCSV(_jahResponse)}\"";
         return rvalue;
     }
 
@@ -39,14 +39,14 @@ public class Entry
 
     public void FromCSV()
     {
-        this._date =_date.Replace("\"\"", "\"");
-        this._prompt._prompt = _prompt._prompt.Replace("\"\"", "\"");
-        this._response =_response.Replace("\"\"", "\"");
+        this._jahDate =_jahDate.Replace("\"\"", "\"");
+        this._jahPrompt._jahPrompt = _jahPrompt._jahPrompt.Replace("\"\"", "\"");
+        this._jahResponse =_jahResponse.Replace("\"\"", "\"");
     }
 
     public override string ToString()
     {
-        string rvalue = $"Date: {_date} - Prompt: {_prompt._prompt}\n{_response}\n";
+        string rvalue = $"Date: {_jahDate} - Prompt: {_jahPrompt._jahPrompt}\n{_jahResponse}\n";
         return rvalue;
     }
 }

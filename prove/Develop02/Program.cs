@@ -5,15 +5,15 @@
 using System;
 using System.Net;
 
-// Class Name	                Journal	                        Entry	                    Prompt
-// class methods	    _entriesList : list<Entry>	    _response : string	            _prompt : string
-// 		                _prompt : Prompt	            _promptList : list<string>  
-//                      _date : DateTime	    
-// 	                    _entry : string	    
-// class functions	    SaveEntry(): void	            ToString(): string	            ToString(): string
-// 	                    SaveJournal(): void		
-// 	                    LoadJournal(): Entry		
-// 	                    ToString(): string		
+// Class Name	                Journal	                                Entry	                    Prompt
+// class methods	    _jahEntriesList : list<Entry>	        _jahResponse : string	           _jahPrompt : string
+// 		                _jahDate : DateTime	                    _jahEntry : string                 _jahPromptList : list<string> 
+//                      	                                    _jahDate : string                  _random : Random
+//          
+// class functions	    SaveEntry(): void	                    ToString(): string	               GeneratePrompt(): string
+// 	                    SaveJournal(string username): void		ToFile(): string
+// 	                    LoadJournal(string username): Entry		ToCSV(): string
+// 	                    ToString(): string	                    FromCSV(): void
 
 class Program
 {
@@ -35,8 +35,8 @@ class Program
             if (jahChoice == "1")
             {
                 Entry entry = new Entry();
-                Console.Write($"{entry._prompt._prompt}\n>");
-                entry._response = Console.ReadLine();
+                Console.Write($"{entry._jahPrompt._jahPrompt}\n>");
+                entry._jahResponse = Console.ReadLine();
 
                 jahJournal.SaveEntry(entry);
             }
