@@ -46,6 +46,8 @@ public class Journal
             {
                 string line = rawLine.Substring(1, rawLine.Length - 2);
 
+                line = line.Replace("\"\",\"\"", "~~|ascii|~~");
+
                 string[] parts = line.Split("\",\"");
 
                 string date = parts[0];

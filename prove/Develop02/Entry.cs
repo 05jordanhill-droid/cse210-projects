@@ -33,14 +33,20 @@ public class Entry
     public string ToCSV(string element)
     {
         element = element.Replace("\"", "\"\"");
+        // element = element.Replace(",", ",,");
 
         return element;
     }
 
     public void FromCSV()
     {
+        this._jahDate = this._jahDate.Replace("~~|ascii|~~", "\"\",\"\"");
         this._jahDate =_jahDate.Replace("\"\"", "\"");
+
+        this._jahPrompt._jahPrompt = this._jahPrompt._jahPrompt.Replace("~~|ascii|~~", "\"\",\"\"");
         this._jahPrompt._jahPrompt = _jahPrompt._jahPrompt.Replace("\"\"", "\"");
+
+        this._jahResponse = this._jahResponse.Replace("~~|ascii|~~", "\"\",\"\"");
         this._jahResponse =_jahResponse.Replace("\"\"", "\"");
     }
 
