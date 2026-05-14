@@ -1,6 +1,13 @@
-// Exceeding the Requirements: 
-// Asks for username rather than file name and saves the name to .csv
-// Accounts for commas and quotation marks to properly display in the .csv file and display into Excel
+/*
+Exceeding the Requirements: 
+Asks for username rather than file name and saves the name to .csv
+Accounts for commas and quotation marks to properly display in the .csv file and display into Excel
+
+Sources:
+   In person and online class material
+   AI: https://chatgpt.com/share/6a063589-4bd4-83e8-96e6-bc0496385289
+       https://chatgpt.com/share/6a063625-6570-83e8-86fd-bbd2d3894d08
+*/
 
 using System;
 using System.Net;
