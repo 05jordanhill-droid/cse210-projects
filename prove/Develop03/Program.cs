@@ -10,7 +10,10 @@ class functions	    Display(): void	        Word(string word)	    Scripture(stri
 	                	                    IsVisible(): boolean	HideRandom(): void	        Reference(string book, int chapter, int first)
 		                                    Hide():void	            ToString(): string	        ToString(): string
 		                                    ToString(): string		
-		                                    GetLen(): int				
+		                                    GetLen(): int		
+
+
+Stretch: Randomly select from only words that are not already hidden		
 */
 using System;
 
