@@ -28,7 +28,6 @@ class Program
         int jahChapter = 3;
         int jahFirst = 5;
         int jahLast = 6;
-
         string jahText = "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.";
 
         Scripture jahScripture = new Scripture(jahText);
