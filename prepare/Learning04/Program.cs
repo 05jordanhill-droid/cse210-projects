@@ -9,12 +9,16 @@ class Program
         MathAssignment jahRob = new MathAssignment("Robert Rodriguez", "Fractions", "7.3", "8-19");
         WritingAssignment jahMary = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
 
-        Console.WriteLine(jahSam.GetSummary());
+        print(jahSam.GetSummary());
 
-        Console.WriteLine(jahRob.GetSummary());
-        Console.WriteLine(jahRob.GetHomeworkList());
+        print(jahRob.GetSummary());
+        print(jahRob.GetHomeworkList());
         
-        Console.WriteLine(jahMary.GetSummary());
-        Console.WriteLine(jahMary.GetWritingInformation());
+        print(jahMary.GetSummary());
+        print(jahMary.GetWritingInformation());
+    }
+    public static void print(string s)
+    {
+        Support.Display(s);
     }
 }
